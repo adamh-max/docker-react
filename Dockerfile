@@ -6,7 +6,7 @@ RUN mkdir -p /home/node/app
 WORKDIR /home/node/app
  
 COPY --chown=node:node ./package.json ./
-RUN npm install
+RUN npm install --save bufferutil@3 ws@1
 COPY --chown=node:node ./ ./
  
 RUN npm run build
